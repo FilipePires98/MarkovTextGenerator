@@ -1,31 +1,18 @@
-# Directory description
-
- - **input:** texts to use as training data for our model
-
- - **output:** files with data relative to the output of the main programs (graphs,
- entropy values for different parameters, generated texts)
-
- - **report:** written report explaining our design choices, presenting results from
- parameter variation and conclusions of those results
-
- - **src:** source code
-
- - **build:** compiled files
+# Markov Text Generator
  
- - **docs:** html documentation
+## Description
 
-# Main programs description
+The programs implemented in C++ have the purpose of collecting statistical information about texts using Markov (finite-context) models, and of automatically producing texts that follow the models built.
 
- - **fcm:** Parses a list of files to train the model and
- presents the entropy of the texts on those files
+Along with the description of the solution, we also discuss the effects of the variation of the programs' parameters and attempt to compare different types of texts by the amount of information they hold on average.
+
+## Main Programs
+
+ - **fcm:** Parses a list of files to train the model and presents the entropy of the texts on those files.
  
- - **generator:** Parses a list of files to train the model and
- generates text to a file based on the occurrences
- statistics of contexts and letters after a context
+ - **generator:** Parses a list of files to train the model and generates text to a file based on the occurrences statistics of contexts and letters after a context.
 
-# How to run and build
-
-On the same folder of this readme file, to compile and run the program:
+## Instructions to Build and Run 
 
 - **fcm**
 
@@ -43,3 +30,19 @@ Both *fcm* and *generator* programs have mandatory arguments. To have informatio
 about them use the `-h` option.
 
 To generate the html documentation run `make docs`.
+
+## Repository Structure
+
+/input      - textual dataset used for model training
+
+/output     - knowledge gathered from the output of the main programs (graphs, entropy values for different parameters, generated texts)
+
+/report     - written report explaining our design choices, presenting results from parameter variation and conclusions of those results
+
+/src        - source code, written in C/C++
+
+## Authors
+
+The authors of this repository are André Pedrosa, Filipe Pires and João Alegria, and the project was developed for the Algorithmic Theory of Information Course of the Master's degree in Informatics Engineering of the University of Aveiro.
+
+For further information, please read our [report](https://github.com/FilipePires98/MarkovTextGenerator/blob/master/report/report.pdf).
