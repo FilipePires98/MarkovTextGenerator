@@ -316,3 +316,12 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Additional
+
+.vscode
+generator
+fcm
+*.log
+*.pdf
+*.gz
